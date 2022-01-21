@@ -6,6 +6,7 @@ var cors = require("cors")
 var io = require('socket.io')(http)
 require('./modules/socket')(io)
 
+const port = process.env.PORT || 3000;
 
 app.use(cors())
 
@@ -16,6 +17,6 @@ app.use(express.json())
 
 app.use("/", router);
 
-http.listen(8686, () => {
-    console.log("Servidor rodando")
+http.listen(port, () => {
+    console.log("Servidor rodando em http://localhost:3000")
 });
