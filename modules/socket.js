@@ -62,7 +62,7 @@ module.exports = function (io) {
     socket.on("start countdown ng", () => {
       if (called == false) {
         called = true
-        Countdown(io, 10).then(res => {
+        Countdown(io, 20).then(res => {
           if (res) {
             called = false
           }
@@ -101,7 +101,7 @@ module.exports = function (io) {
     socket.on("start countdown bf", () => {
       if (called == false) {
         called = true
-        Countdown(io, 10).then(res => {
+        Countdown(io, 59).then(res => {
           if (res) {
             called = false
           }
